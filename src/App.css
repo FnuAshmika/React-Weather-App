@@ -1,7 +1,46 @@
 .App {
   text-align: center;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+nav h4{
+  margin: 20px;
 
+}
+nav button{
+  margin: 20px;
+  padding: 5px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border-radius: 18px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+ 
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: rgb(59, 130, 51);
+  
+}
+
+
+
+
+nav h4 a {
+  color: #fff;
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
