@@ -1,4 +1,4 @@
-import { useContext,useState,useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 import { DataContext } from "../contexts/DataProvider";
 import City from '../components/City';
@@ -6,14 +6,14 @@ import CityForm from "../components/CityForm";
 
 
 
-export default function Home({setShowLogout}) {
+export default function Home({ setShowLogout }) {
     const { login, user, logout } = useContext(AuthContext)
     const { cities } = useContext(DataContext)
     useEffect(() => {
         setShowLogout(true);
         return () => setShowLogout(false);
-      }, [setShowLogout]);
-
+    }, [setShowLogout]);
+    const filteredCities = cities.filter(city => city.uid === user.uid);
     return (
         <div>
             {user.loggedIn ?
@@ -24,7 +24,7 @@ export default function Home({setShowLogout}) {
                     <h2>Here are your cities below:</h2>
                     <CityForm />
                     <div className="inner-Profile">
-                        {cities.map((city) => <City city={city} key={city.id} />)}
+                        {filteredCities.map((city) => <City city={city} key={city.id} />)}
                     </div>
                 </div> :
                 <div className="home">
