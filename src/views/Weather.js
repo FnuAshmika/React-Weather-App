@@ -23,9 +23,12 @@ export default function Weather() {
                 const name = data.name
                 console.log(data.name)
                 const weather = await getWeather(name, apiKey)
+                if(weather.cod!="200")
+                {setError(true)}
+                else{
                 setWeatherData(weather)
                 console.log(weather)
-                setLoadingState("LOADED")
+                setLoadingState("LOADED")}
 
 
             } catch (err) { setError(true) }
@@ -40,7 +43,7 @@ export default function Weather() {
     return (
         <div className="card">
             {error ? <>
-                <p>404 Page not found</p>
+                <h1>404 Page not found</h1>
             </> : <>
                 <div className="weather">
                     {(loadingState === "LOADING") ?

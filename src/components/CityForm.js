@@ -12,7 +12,7 @@ export default function CityForm() {
         <form onSubmit = { handleSubmit } >
             <div className="cityForm">
         <div>
-        <input type="text" name="name" id="name" onChange={(e)=>setName(e.target.value)} value={name} /></div>
+        <input type="text" name="name" id="name" onChange={(e)=>setName(e.target.value)} value={name} placeholder="Enter a valid city"/></div>
         <button>Add City</button></div>
         </form >
     )

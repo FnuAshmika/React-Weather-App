@@ -12,7 +12,7 @@ export default function City(props) {
                 (props.hideLink) ?
                     <></> : <div className="clickables">
                         <button onClick={() => deleteCity(props.city.uid, props.city.id)}>Delete</button>
-                        <Link to={`/city/${props.city.uid}/${props.city.id}`} className="button-link">More Info</Link>
+                        <Link to={`/city/${props.city.uid}/${props.city.id}`} className="button-link">Weather Info</Link>
                     </div>
             }
         </div>
