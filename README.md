@@ -1,4 +1,19 @@
 Page link :- https://glittery-puffpuff-0ac46d.netlify.app/
+
+# City Weather App
+
+This is a React application that allows users to view the current weather in cities around the world. The application requires the user to 
+log in, which will then allow them to add their favorite cities and view the weather information of each city. The application makes API 
+requests to OpenWeatherMap to pull the data and display on the page. 
+
+The application consists of two components, three views, a DataProvider, and an AuthProvider.
+
+The homepage will prompt the user to login. Once authenticated, the user will be able to view their favorite cities and add new cities. 
+Each city will have a button to view the weather, which will take the user to a separate page with the weather information for that specific city. 
+
+Finally, use netlify to host your finished product.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
